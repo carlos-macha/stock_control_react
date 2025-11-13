@@ -1,0 +1,32 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+header, footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  background: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  z-index: 10;
+}
+
+header {
+  top: 0;
+}
+
+footer {
+  bottom: 0;
+}
+
+main {
+  padding-top: 60px;
+  padding-bottom: 40px;
+  min-height: calc(100vh - 100px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

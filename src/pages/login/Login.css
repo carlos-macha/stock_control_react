@@ -1,0 +1,21 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: var(--bg-color);
+}
+
+.login-box {
+  background: var(--bg-color);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  width: 350px;
+}
+
+.login-box h1 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}

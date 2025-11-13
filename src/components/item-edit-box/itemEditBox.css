@@ -1,0 +1,16 @@
+.item-edit-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-edit-box p {
+    font-size: 150%;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden; 
+    text-overflow: ellipsis;
+}
+
+.button-edit {
+    display: flex;
+}

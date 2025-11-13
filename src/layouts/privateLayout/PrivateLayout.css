@@ -1,0 +1,40 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Header fixo */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: #333;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  z-index: 200;
+}
+
+/* mobile: sidebar desliza por cima do conteúdo */
+@media (max-width: 768px) {
+  .page-content {
+    margin-left: 0;
+  }
+}
+
+.page-content {
+  flex: 1;
+
+  margin-top: 60px; /* abaixo do header */
+  margin-left: 0; /* padrão sem sidebar */
+  transition: margin-left 0.3s ease; /* animação suave */
+}
+
+/* quando a sidebar está aberta, empurra o conteúdo */
+.sidebar.open ~ .page-content {
+  margin-left: 220px; /* mesma largura da sidebar */
+}
