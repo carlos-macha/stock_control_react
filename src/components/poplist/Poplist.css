@@ -3,42 +3,31 @@
   display: inline-block;
 }
 
-.poplist-button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 8px 14px;
-  border-radius: 6px;
+.poplist-trigger {
   cursor: pointer;
-  font-size: 14px;
-  transition: background 0.2s ease;
-}
-
-.poplist-button:hover {
-  background-color: #0066d1;
 }
 
 .poplist-menu {
   position: absolute;
   top: 110%;
   right: 0;
-  background: white;
-  border: 1px solid #ddd;
+  background: var(--card-color);
+  border: 1px solid var(--border-color);
   border-radius: 8px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
-  padding: 4px 0;
   list-style: none;
+  padding: 8px 0;
   margin: 0;
-  z-index: 100;
-  min-width: 150px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  z-index: 10;
 }
 
 .poplist-item {
-  padding: 8px 12px;
+  padding: 8px 16px;
   cursor: pointer;
-  font-size: 14px;
+  white-space: nowrap;
+  color: var(--text-color);
 }
 
 .poplist-item:hover {
-  background-color: #f1f1f1;
+  background: #f5f5f5;
 }

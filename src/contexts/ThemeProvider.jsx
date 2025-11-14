@@ -8,27 +8,32 @@ export function ThemeProvider({ children }) {
   const [theme, setTheme] = useState(lightTheme);
 
   const toggleTheme = () => {
-    setThemeName((prev) => (prev === "light" ? "dark" : "light"));
+    setThemeName(prev => (prev === "light" ? "dark" : "light"));
   };
 
+  // Atualiza o tema quando o themeName muda
   useEffect(() => {
     setTheme(themeName === "light" ? lightTheme : darkTheme);
   }, [themeName]);
 
+  // Atualiza as variáveis CSS
   useEffect(() => {
-    document.documentElement.style.setProperty("--bg-color", theme.background);
-    document.documentElement.style.setProperty("--text-color", theme.text);
-    document.documentElement.style.setProperty("--card-color", theme.card);
-    document.documentElement.style.setProperty("--border-color", theme.border);
+    const root = document.documentElement;
 
-    document.documentElement.style.setProperty("--primary-color", theme.primary.main);
-    document.documentElement.style.setProperty("--primary-hover", theme.primary.hover);
-    document.documentElement.style.setProperty("--secondary-color", theme.secondary.main);
-    document.documentElement.style.setProperty("--secondary-hover", theme.secondary.hover);
-    document.documentElement.style.setProperty("--success-color", theme.success.main);
-    document.documentElement.style.setProperty("--success-hover", theme.success.hover);
-    document.documentElement.style.setProperty("--danger-color", theme.danger.main);
-    document.documentElement.style.setProperty("--danger-hover", theme.danger.hover);
+    root.style.setProperty("--bg-color", theme.background);
+    root.style.setProperty("--bg-alt-color", theme.backgroundAlt);
+    root.style.setProperty("--text-color", theme.text);
+    root.style.setProperty("--card-color", theme.card);
+    root.style.setProperty("--border-color", theme.border);
+
+    root.style.setProperty("--primary-color", theme.primary.main);
+    root.style.setProperty("--primary-hover", theme.primary.hover);
+    root.style.setProperty("--secondary-color", theme.secondary.main);
+    root.style.setProperty("--secondary-hover", theme.secondary.hover);
+    root.style.setProperty("--success-color", theme.success.main);
+    root.style.setProperty("--success-hover", theme.success.hover);
+    root.style.setProperty("--danger-color", theme.danger.main);
+    root.style.setProperty("--danger-hover", theme.danger.hover);
   }, [theme]);
 
   return (

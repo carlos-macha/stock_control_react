@@ -6,7 +6,7 @@
 
 .input-container label {
   margin-bottom: 5px;
-  color: #333;
+  color: var(--text-color);
   font-weight: bold;
 }
 
@@ -19,7 +19,7 @@
 .input-wrapper input {
   width: 100%;
   padding: 10px 35px 10px 10px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border-color);
   border-radius: 6px;
   font-size: 1rem;
 }
@@ -27,7 +27,7 @@
 .input-icon {
   position: absolute;
   right: 10px;
-  color: #888;
+  color: var(--text-color);
   font-size: 18px;
   pointer-events: none;
 }

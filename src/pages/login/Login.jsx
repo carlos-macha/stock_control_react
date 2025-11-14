@@ -14,7 +14,7 @@ export default function Login() {
     function handleLogin(e) {
         e.preventDefault();
 
-        Navigate("/home");
+        Navigate("/consultation");
     }
 
     return (

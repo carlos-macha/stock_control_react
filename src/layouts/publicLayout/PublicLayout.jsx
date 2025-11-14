@@ -4,9 +4,9 @@ import { Outlet } from "react-router-dom";
 
 export default function PublicLayout() {
   return (
-    <div>
+    <div className="public-layout">
       <header>
-        <h1>Meu Site Público</h1>
+        <h1>Sistema de Estoque</h1>
       </header>
 
       <main>

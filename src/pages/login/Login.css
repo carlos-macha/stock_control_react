@@ -1,9 +1,13 @@
 .login-container {
+  width: 100%;
+  height: calc(100vh - 100px); /* 60px header + 40px footer */
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  background: var(--bg-color);
+  background-image: url('src/assets/backImage.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .login-box {

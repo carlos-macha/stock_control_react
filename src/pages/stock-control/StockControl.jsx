@@ -20,7 +20,7 @@ export default function StockControl() {
             >
                 <h2>Adicionar Item</h2>
                 <Input
-                    label="Código único"
+                    label="Quantidade"
                     type="number"
                     value={increaseQuantity}
                     onChange={(e) => setincreaseQuantity(e.target.value)}

@@ -11,12 +11,23 @@ import { IoLogOutOutline } from "react-icons/io5";
 
 export default function Header({ toggleSidebar }) {
   const [showLogOutModal, setShowLogoutModal] = useState(false);
-  const Navigate = useNavigate();
+  const navigate = useNavigate();
+
+  const options = [
+    { label: "Conta", value: "account" },
+    { label: "Configuração", value: "config" },
+  ];
+
+  function handleSelect(value) {
+    console.log("Opção selecionada:", value);
+
+    if (value === "account") alert("Editar clicado!");
+    else if (value === "config") alert("Excluir clicado!");
+  }
 
   function handleLogin(e) {
     e.preventDefault();
-
-    Navigate("/");
+    navigate("/");
   }
 
   return (
@@ -38,12 +49,19 @@ export default function Header({ toggleSidebar }) {
           <Button onClick={() => setShowLogoutModal(false)}>Cancelar</Button>
         </div>
       </Modal>
+
       <div className="menu-btn">
         <IconButton onClick={toggleSidebar} icon={GiHamburgerMenu} />
-        <h1>Meu Site</h1>
+        <h1>Estoque</h1>
       </div>
+
       <div className="useful-buttons">
-        <IconButton icon={IoMdSettings} />
+        <Poplist
+          trigger={<IconButton icon={IoMdSettings} />}
+          options={options}
+          onSelect={handleSelect}
+        />
+
         <IconButton
           icon={IoLogOutOutline}
           onClick={() => setShowLogoutModal(true)}

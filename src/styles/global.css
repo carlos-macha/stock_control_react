@@ -1,3 +1,4 @@
+/* Reset e fontes */
 * {
   margin: 0;
   padding: 0;
@@ -5,13 +6,8 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
+html, body, #root {
   height: 100%;
-  overflow: auto; /* ✅ permite rolagem */
-}
-
-#root {
-  height: 100%;
+  width: 100%;
+  overflow: auto; /* permite rolagem quando necessário */
 }

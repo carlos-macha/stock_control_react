@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { FaPlus, FaEdit, FaClipboardList, FaSearch } from "react-icons/fa";
 import "./Sidebar.css";
 
@@ -6,10 +6,33 @@ export default function Sidebar({ open }) {
   return (
     <aside className={`sidebar ${open ? "open" : ""}`}>
       <nav className="menu">
-        <Link to="/item-registration"><FaPlus /> Cadastro</Link>
-        <Link to="/item-editing"><FaEdit /> Edição</Link>
-        <Link to="/stock-control"><FaClipboardList /> Controle</Link>
-        <Link to="/consultation"><FaSearch /> Consulta</Link>
+        <NavLink
+          to="/consultation"
+          className={({ isActive }) => isActive ? "active" : ""}
+        >
+          <FaSearch /> Consulta
+        </NavLink>
+
+        <NavLink
+          to="/item-registration"
+          className={({ isActive }) => isActive ? "active" : ""}
+        >
+          <FaPlus /> Cadastro
+        </NavLink>
+
+        <NavLink
+          to="/item-editing"
+          className={({ isActive }) => isActive ? "active" : ""}
+        >
+          <FaEdit /> Edição
+        </NavLink>
+
+        <NavLink
+          to="/stock-control"
+          className={({ isActive }) => isActive ? "active" : ""}
+        >
+          <FaClipboardList /> Controle
+        </NavLink>
       </nav>
     </aside>
   );

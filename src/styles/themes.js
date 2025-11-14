@@ -1,10 +1,11 @@
 export const lightTheme = {
-  background: "#f8f9fa", // fundo geral
+  background: "#f8f9fa",          // fundo geral
+  backgroundAlt: "#e9ecef",       // fundo alternativo, um pouco mais escuro
   text: "#2d2d2d",
   primary: {
-    main: "#3b3b98",     // azul acinzentado elegante
-    hover: "#32327d",    // um tom mais escuro ao passar o mouse
-    disabled: "#b0b3c7", // versão desativada
+    main: "#3b3b98",
+    hover: "#32327d",
+    disabled: "#b0b3c7",
   },
   secondary: {
     main: "#5f6368",
@@ -12,11 +13,11 @@ export const lightTheme = {
     disabled: "#c4c6c8",
   },
   success: {
-    main: "#2e7d32",     // verde discreto
+    main: "#2e7d32",
     hover: "#255d27",
   },
   danger: {
-    main: "#b91c1c",     // vermelho profissional (não gritante)
+    main: "#b91c1c",
     hover: "#991b1b",
   },
   card: "#ffffff",
@@ -25,6 +26,7 @@ export const lightTheme = {
 
 export const darkTheme = {
   background: "#121212",
+  backgroundAlt: "#1a1a1a",      // fundo alternativo um pouco mais escuro
   text: "#e5e5e5",
   primary: {
     main: "#4a4e91",

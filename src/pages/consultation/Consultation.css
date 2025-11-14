@@ -1,0 +1,89 @@
+.consultation {
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px;
+    background: var(--bg-color);
+}
+
+.consultation form {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.unique-search-code button,
+.search-date button {
+    height: 42px;
+    padding: 0 20px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.unique-search-code form {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    margin: 0 auto;
+}
+
+.unique-search-code .input-container {
+    flex: 1;
+}
+
+.date-box {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.date-box .input-container {
+    flex: 1;
+}
+
+.search-date form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.search-date button {
+    align-self: flex-end;
+}
+
+.stock-table {
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: var(--card-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.stock-table th {
+    background: var(--bg-alt-color);
+    padding: 14px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+.stock-table td {
+    padding: 12px;
+    font-size: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.stock-table th,
+.stock-table td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.stock-table tbody tr:nth-child(even) {
+    background: var(--bg-color);
+}
